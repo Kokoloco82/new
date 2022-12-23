@@ -1,0 +1,97 @@
+<h4>LTPS Zertifizierungs - Simulator für Multiple- Single - Fillin Fragen</h4>
+
+<mat-card class="card" *ngIf="!unsichtbar">
+  <div class="Auswertung">
+     <P>Auswertung deiner Antworten</P>
+    <div> <br>
+    <div>
+      Anzahl Fragen            : {{kontrolle.fanzahl}} <br><br>
+      Anzahl Richtiger Fragen  : {{kontrolle.frichtig}} <br><br>
+      Anzahl Falscher Antworten: {{kontrolle.ffalsch}} <br><br>
+      Anzahl Nicht Beantwortet : {{kontrolle.fnichtbeantwortet}} <br><br>
+    </div>
+    </div>
+
+  </div>
+</mat-card>
+
+<div class="ui form" *ngIf="unsichtbar">
+  <mat-card class="card">
+    <h2>FragenNr.: {{ frage.fid }}</h2>
+    <div *ngFor="let zeile of frage.frage">
+      <div style="white-space: pre-wrap; margin-bottom: 10px;" class="textfeldfrage">{{ zeile }}</div>
+    </div>
+    <div class="field">
+      <div>
+
+        <div *ngIf="frage.ftyp === 'multi'">
+          <!-- <h6> habe multi gefunden </h6> -->
+          <!-- // antorten sind selectierbar -->
+          <div *ngIf="!visible">
+            <div *ngFor="let antwort of frage.antworten">
+              <div *ngIf="!antwort.checked">
+                <div fxlayout="row">
+                  <input type="checkbox" (click)="antwort.checked = !antwort.checked">
+                  <label >{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                </div>
+              </div>
+              <div *ngIf="antwort.checked">
+                <div fxlayout="row">
+                  <input type="checkbox" (click)="antwort.checked = !antwort.checked" checked>
+                  <label >{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- // nur correcte antowrten anzeigen -->
+          <div *ngIf="visible">
+            <h3>Richtige Antworten sind:</h3>
+            <h5>Selktieren wird nicht gewertet!!!</h5>
+            <div *ngFor="let antwort of frage.antworten">
+              <div *ngIf="!antwort.correct">
+                <div fxlayout="row">
+                  <input type="checkbox">
+                  <label>{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                </div>
+              </div>
+              <div *ngIf="antwort.correct">
+                <div fxlayout="row">
+                  <input type="checkbox" checked>
+                  <label>{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+
+<mat-card class="card2">
+  <button (click)="letztequestion()" class="ui animated fade button blue" >
+  <div class="visible content">letztefrage</div>
+  <div class="hidden content">back</div>
+</button>
+
+<button (click)="erstequestion()" class="ui animated fade button blue" >
+  <div class="visible content">ErsteFrage</div>
+  <div class="hidden content">back</div>
+</button>
+
+<button (click)="prev()" class="ui animated fade button blue" >
+  <div class="visible content">prev</div>
+  <div class="hidden content">"<"</div>
+</button>
+
+<button (click)="next()" class="ui animated fade button blue" >
+  <div class="visible content">next</div>
+  <div class="hidden content">">"</div>
+</button>
+
+<button type="button" (click)="visible = !visible" class="ui animated fade button green" >
+  <div class="visible content">Lösung</div>
+  <div class="hidden content">back</div>
+</button>
+</mat-card>
+</div>

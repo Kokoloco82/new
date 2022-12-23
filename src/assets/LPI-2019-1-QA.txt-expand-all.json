@@ -1,0 +1,1076 @@
+// {
+//   fid:9,
+//   ftyp:"multi",
+//   frage: ['Consider the following directory:',
+//   'drwxrwxr-x 2 root sales 4096 Jan 1 15:21 sales',
+//  'Which command ensures new files created within the directory sales are owned by the group sales?',
+//  '(Choose two.)'],
+//   antworten: [
+//     {text: 'A.  chmod g+s sales', correct: true},
+//     {text: 'B.  setpol -R newgroup=sales sales', correct: false},
+//     {text: 'C.  chgrp -p sales sales', correct: false},
+//     {text: 'D.  chown --persistent *.sales sales', correct: false},
+//     {text: 'E.  chmod 2775 sales', correct: true},
+//   ],
+//   richtig: [0,4]
+// },
+// {
+//   fid:10,
+//   ftyp:"multi",
+//   frage: ['In order to display all currently mounted filesystems, which of the following commands could be used?',
+//   '(Choose two.)'],
+//   antworten: [
+//     {text: 'cat /proc/self/mounts', correct: true},
+//     {text: 'free', correct: false},
+//     {text: 'lsmounts', correct: false},
+//     {text: 'mount', correct: true},
+//     {text: 'cat /proc/filesystems', correct: false},
+//   ],
+//   richtig: [0,3]
+// },
+// {
+//   fid:18,
+//   ftyp:"multi",
+//   frage:['Which of the following statements are true about the boot sequence of a PC using a BIOS?',
+//   '(Choose two.)'],
+//   antworten:
+//   [
+//     {text:'Some parts of the boot process can be configured from the BIOS',correct: true},
+//     {text:'Linux does not require the assistance of the BIOS to boot a computer',correct: false},
+//     {text:'The BIOS boot process starts only if secondary storage, such as the hard disk, is functional',correct: false},
+//     {text:'The BIOS initiates the boot process after turning the computer on',correct: true},
+//     {text: 'The BIOS is started by loading hardware drivers from secondary storage, such as the hard disk',correct: false}
+//   ],
+//   richtig: [0,3]
+// },
+// {
+//   fid:19,
+//   ftyp:"multi",
+//   frage:['What is true regarding UEFI firmware? ',
+//   '(Choose two.)'],
+//   antworten:
+//   [
+//     {text:'It can read and interpret partition tables',correct: true},
+//     {text:'It can use and read certain file systems',correct: true},
+//     {text:'It stores its entire configuration on the /boot/ partition',correct: false},
+//     {text:'It is stored in a special area within the GPT metadata',correct: false},
+//     {text:'It is loaded from a fixed boot disk position', correct: false},
+//   ],
+//   richtig: [0,1]
+// },
+// {
+//   fid:21,
+//   ftyp:"multi",
+//   frage:['When is the content of the kernel ring buffer reset? ',
+//   '(Choose two.)'],
+//   antworten:
+//   [
+//     {text:'When the ring buffer is explicitly reset using the command dmesg --clear',correct: true},
+//     {text:'When the ring buffer is read using dmesg without any additional parameters',correct: false},
+//     {text:'When a configurable amount of time, 15 minutes by default, has passed',correct: false},
+//     {text:'When the kernel loads a previously unloaded kernel module',correct: false},
+//     {text:'When the system is shut down or rebooted',correct: true},
+//   ],
+//   richtig: [0,3]
+// },
+// {
+//   fid:25,
+//   ftyp:"multi",
+//   frage:['Which of the following directories on a 64 bit Linux system typically contain shared libraries? ',
+//   '(Choose two.)'],
+//   antworten:
+//   [
+//     {text:'~/.lib64/',correct: false},
+//     {text:'/usr/lib64/',correct: true},
+//     {text:'/var/lib64/',correct: false},
+//     {text:'/lib64/',correct: true},
+//     {text:'/opt/lib64/', correct: false},
+//   ],
+//   richtig: [1,3]
+// },
+// {
+//   fid:26,
+//   ftyp:"multi",
+//   frage:['Which of the following files exist in a standard GRUB 2 installation? ',
+//   '(Choose two.)'],
+//   antworten:
+//   [
+//     {text:'/boot/grub/stages/stage0',correct: false},
+//     {text:'/boot/grub/i386-pc/lvm.mod',correct: true},
+//     {text:'/boot/grub/fstab',correct: false},
+//     {text:'/boot/grub/grub.cfg',correct: true},
+//     {text:'/boot/grub/linux/vmlinuz',correct: false},
+//   ],
+//   richtig: [1,3]
+// },
+// {
+//   fid:28,
+//   ftyp:"multi",
+//   frage:['Which of the following properties of a Linux system should be changed when a virtual machine is cloned? ',
+//   '(Choose two.)'],
+//   antworten:
+//   [
+//     {text:'The partitioning scheme',correct: false},
+//     {text:'The file system',correct: false},
+//     {text:'The D-Bus Machine ID',correct: true},
+//     {text:'The permissions of /root/',correct: false},
+//     {text:'The SSH host keys',correct: true},
+//   ],
+//   richtig: [2,4]
+// },
+// {
+//   fid:31,
+//   ftyp:"multi",
+//   frage:['What is true regarding the configuration of yum?',
+//   '(Choose two.)'],
+//   antworten:
+//   [
+//     {text:'Changes to the repository configuration become active after running yum confupdate',correct: false},
+//     {text:'Changes to the yum configuration become active after restarting the yumd service',correct: false},
+//     {text:'The configuration of package repositories can be divided into multiple files',correct: true},
+//     {text:'Repository configurations can include variables such as $basearch or $releasever',correct: true},
+//     {text:'In case /etc/yum.repos.d/ contains files, /etc/yum.config ignored',correct: false},
+//   ],
+//   richtig: [2,3]
+// },
+// {
+//   fid:36,
+//   ftyp:"multi",
+//   frage:['What is true regarding the configuration of yum?',
+//   '(Choose two.)'],
+//   antworten:
+//   [
+//     {text:'find /tmp -user root -print',correct: true},
+//     {text:'find /tmp -user root -print',correct: false},
+//     {text:'find /tmp -uid root -print',correct: false},
+//     {text:'find /tmp -user root',correct: true},
+//     {text:'find /tmp -user root',correct: false},
+//   ],
+//   richtig: [0,3]
+// },
+// {
+//   fid:37,
+//   ftyp:"multi",
+//   frage:['Which of the following are valid stream redirection operators within Bash? ',
+//   '(Choose two.)'],
+//   antworten:
+//   [
+//     {text:'<',correct: true},
+//     {text:'#>',correct: false},
+//     {text:'%>',correct: false},
+//     {text:'>>>',correct: true},
+//     {text:'2>&1',correct: false},
+//   ],
+//   richtig: [0,4]
+// },
+// {
+//   fid:40,
+//   ftyp:"multi",
+//   frage:['From a Bash shell, which of the following commands directly execute the instructions from the file',
+//   '/usr/local/bin/runme.sh without starting a subshell?',
+//   '(Choose two.)'],
+//   antworten:
+//   [
+//     {text:'source /usr/local/bin/runme.sh',correct: true},
+//     {text:'/usr/local/bin/runme.sh',correct: false},
+//     {text:'/bin/bash /usr/local/bin/runme.sh',correct: false},
+//     {text:'.  /usr/local/bin/runme.sh',correct: true},
+//     {text:'run /usr/local/bin/runme.sh',correct: false},
+//   ],
+//   richtig: [0,3]
+// },
+// {
+//   fid:51,
+//   ftyp:"multi",
+//   frage:['Which of the following commands can be used to determine how long the system has been running? ',
+//   '(Choose two.)'],
+//   antworten:
+//   [
+//     {text:'uptime',correct: true},
+//     {text:'up',correct: false},
+//     {text:'time --up',correct: false},
+//     {text:'uname -u',correct: false},
+//     {text:'top',correct: true},
+//   ],
+//   richtig: [0,4]
+// },
+// {
+//   fid:54,
+//   ftyp:"multi",
+//   frage:['Which wildcards will match the following filenames? ',
+//   '(Choose two.)','ttyS0', 'ttyS1', 'ttyS2',
+// ],
+//   antworten:
+//   [
+//     {text:'ttyS[1-5]', correct: false},
+//     {text:'tty?[0-5]', correct: true},
+//     {text:'tty*2', correct: false},
+//     {text:'tty[A-Z][012]', correct: true},
+//     {text:'tty[Ss][02]', correct: false},
+//   ],
+//   richtig: [1,3]
+// },
+// {
+//   fid:61,
+//   ftyp:"multi",
+//   frage:['Instead of supplying an explicit device in /etc/fstab for mounting, what other options may be used to identify the intended partition?',
+//   '(Choose two.)'],
+//   antworten:[
+//     {text:'LABEL', correct: true},
+//     {text:'ID', correct: false},
+//     {text:'FIND', correct: false},
+//     {text:'NAME', correct: false},
+//     {text:'UUID', correct: true},
+//   ],
+//   richtig: [0,4]
+// },
+// {
+//   fid:65,
+//   ftyp:"multi",
+//   frage:['Which of the following files are found in the /boot/ filesystem?',
+//   '(Choose two.)'],
+//   antworten:[
+//     {text:'Linux kernel images', correct: true},
+//     {text:'Bash shell binaries', correct: false},
+//     {text:'systemd target and service units', correct: false},
+//     {text:'Initial ramdisk images', correct: true},
+//     {text:'fsck binaries', correct: false},
+//   ],
+//   richtig: [0,3]
+// },
+// {
+//   fid:51,
+//   ftyp:"multi",
+//   frage:['Which of the following statements are correct when comparing Linux containers with traditional virtual machines (e.g. LXC vs. KVM)? ',
+//   '(Choose three.)'],
+//   antworten:[
+//     {text:'Containers are a lightweight virtualization method where the kernel controls process isolation and resource management.', correct: true},
+//     {text:'Fully virtualized machines can run any operating system for a specific hardware architecture within the virtual machine.', correct: true},
+//     {text:'Containers are completely decoupled from the host system’s physical hardware and can only use emulated virtual hardware devices.', correct: false},
+//     {text:'The guest environment for fully virtualized machines is created by a hypervisor which provides virtual and emulated hardware devices.', correct: true},
+//     {text:'Containers on the same host can use different operating systems, as the container hypervisor creates separate kernel execution.', correct: false},
+//   ],
+//   richtig: [0,1,3]
+// },
+// {
+//   fid:71,
+//   ftyp:"multi",
+//   frage:['Which of the following commands are valid in the GRUB 2 configuration file? ',
+//   '(Choose two.)'],
+//   antworten:[
+//     {text:'menuentry', correct: true},
+//     {text:'uefi', correct: false},
+//     {text:'pxe-ifconfig', correct: false},
+//     {text:'insmod', correct: true},
+//     {text:'kpartx', correct: false},
+//   ],
+//   richtig: [0,3]
+// },
+// {
+//   fid:73,
+//   ftyp:"multi",
+//   frage:['What can the Logical Volume Manager (LVM) be used for?  ',
+//   '(Choose three.)'],
+//   antworten:[
+//     {text:'To create snapshots.', correct: true},
+//     {text:'To dynamically change the size of logical volumes.', correct: true},
+//     {text:'To dynamically create or delete logical volumes.', correct: true},
+//     {text:'To create RAID 9 arrays.', correct: false},
+//     {text:'To encrypt logical volumes.', correct: false},
+//   ],
+//   richtig: [0,1,2]
+// },
+// {
+//   fid:74,
+//   ftyp:"multi",
+//   frage:['What are the main differences between GPT and MBR partition tables regarding maximum number and size of partitions?',
+//   '(Choose two.)'],
+//   antworten:[
+//     {text:'MBR can handle partition sizes up to 4 TB, whereas GPT supports partition sizes up to 128 ZB.', correct: false},
+//     {text:'By default, GPT can manage up to 128 partitions while MBR only supports four primary partitions.', correct: true},
+//     {text:'By default, GPT can manage up to 64 partitions while MBR only supports 16 primary partitions.', correct: false},
+//     {text:'MBR can handle partition sizes up to 2.2 TB, whereas GPT supports sizes up to 9.4 ZB.', correct: true},
+//     {text:'Both GPT and MBR support up to four primary partitions, each with up to 4096 TB.', correct: false},
+//   ],
+//   richtig: [1,3]
+// },
+// {
+//   fid:75,
+//   ftyp:"multi",
+//   frage:['A backup software heavily uses hard links between files which have not been changed in between two backup runs.',
+//   'Which benefits are realized due to these hard links? (Choose two.)'],
+//   antworten:[
+//     {text:'The old backups can be moved to slow backup media, such as tapes, while still serving as hard link target in new backups.', correct: false},
+//     {text:'The backup runs faster because hard links are asynchronous operations, postponing the copy operation to a later point in time.', correct: false},
+//     {text:'The backup is guaranteed to be uncharged because a hard linked file cannot be modified after its creation.', correct: false},
+//     {text:'The backup consumes less space because the hard links point to the same data on disk instead of storing redundant copies.', correct: true},
+//     {text:'The backup runs faster because, instead of copying the data of each file, hard links only change file system meta data.', correct: true},
+//   ],
+//   richtig: [3,4]
+// },
+// {
+//   fid:78,
+//   ftyp:"multi",
+//   frage:['Running chmod 640 filea.txt as a regular user doesn’t update filea.txt’s permission.',
+//   'What might be a reason why chmod cannot modify the permissions? (Choose two.)'],
+//   antworten:[
+//     {text:'filea.txt is owned by another user and a regular user cannot change the permissions of another user’s file.', correct: true},
+//     {text:'filea.txt is a symbolic link whose permissions are a fixed value which cannot be changed.', correct: true},
+//     {text:'filea.txt has the sticky bit set and a regular user cannot remove this permission.', correct: false},
+//     {text:'filea.txt is a hard link whose permissions are inherited from the target and cannot be set directly.', correct: false},
+//     {text:'filea.txt has the SetUID bit set which imposes the restriction that only the root user can make changes to the file.', correct: false},
+//   ],
+//   richtig: [0,1]
+// },
+// {
+//   fid:79,
+//   ftyp:"multi",
+//   frage:['Which of the following Linux filesystems preallocate a fixed number of inodes when creating a new filesystem instead of generating them as needed? (Choose two.)'],
+//   antworten:[
+//     {text:'JFS', correct: false},
+//     {text:'ext3', correct: true},
+//     {text:'XFS', correct: false},
+//     {text:'ext2', correct: true},
+//     {text:'procfs', correct: false},
+//   ],
+//   richtig: [1,3]
+// },
+// {
+//   fid:81,
+//   ftyp:"multi",
+//   frage:['Which of the following commands can be used to display the inode number of a given file? (Choose two.)'],
+//   antworten:[
+//     {text:'inode', correct: false},
+//     {text:'ln', correct: false},
+//     {text:'ls', correct: true},
+//     {text:'cp', correct: false},
+//     {text:'stat', correct: true},
+//   ],
+//   richtig: [2,4]
+// },
+// {
+//   fid:91,
+//   ftyp:"multi",
+//   frage:['Which of the following commands display the IDs of all processes owned by root? (Choose two.)'],
+//   antworten:[
+//     {text:'pgrep -c root', correct: false},
+//     {text:'pgrep -u root', correct: true},
+//     {text:'pgrep -f root', correct: false},
+//     {text:'pgrep -U 0', correct: true},
+//     {text:'pgrep -c 0', correct: false},
+//   ],
+//   richtig: [1,3]
+// },
+// {
+//   fid:92,
+//   ftyp:"multi",
+//   frage:['Which of the following sequences in the vi editor saves the opened document and exits the editor?',
+//   '(Choose two.)'],
+//   antworten:[
+//     {text:'Ctrl XX', correct: false},
+//     {text:'Ctrl :W', correct: false},
+//     {text:'Esc zz', correct: false},
+//     {text:'Esc :wq', correct: true},
+//     {text:'Esc ZZ', correct: true},
+//   ],
+//   richtig: [3,4]
+// },
+// {
+//   fid:94,
+//   ftyp:"multi",
+//   frage:['Which of the following tools can show the complete path of an executable file that the current shell would execute when starting a command without specifying its complete path? (Choose two.)'],
+//   antworten:[
+//     {text:'find', correct: false},
+//     {text:'pwd', correct: false},
+//     {text:'which', correct: true},
+//     {text:'locate', correct: false},
+//     {text:'type', correct: true},
+//   ],
+//   richtig: [2,4]
+// },
+// {
+//   fid:97,
+//   ftyp:"multi",
+//   frage:['Which of the following commands print the current working directory when using a Bash shell?',
+//   '(Choose two.)'],
+//   antworten:[
+//     {text:'echo "${PWD}"', correct: true},
+//     {text:'echo "${WD}"', correct: false},
+//     {text:'printwd', correct: false},
+//     {text:'pwd', correct: true},
+//     {text:'echo "${pwd}"', correct: false},
+//   ],
+//   richtig: [0,3]
+// },
+// {
+//   fid:116,
+//   ftyp:"multi",
+//   frage:['Which of the following statements are correct about the initial RAM disk involved in the boot process of Linux? (Choose two.)'],
+//   antworten:[
+//     {text:'An initramfs is a compressed file system archive, which can be unpacked to examine its contents.', correct: true},
+//     {text:'An initramfs file contains the MBR, the bootloader and the Linux kernel.', correct: false},
+//     {text:'After a successful boot, the initramfs contents are available in /run/initramfs/.', correct: false},
+//     {text:'The kernel uses the initramfs temporarily before accessing the real root file system.', correct: true},
+//     {text:'An initramfs does not depend on a specific kernel version and is not changed after the initial installation.', correct: false},
+//   ],
+//   richtig: [0,3]
+// },
+// {
+//   fid:118,
+//   ftyp:"multi",
+//   frage:['What information can the lspci command display about the system hardware? (Choose three.)'],
+//   antworten:[
+//     {text:'System battery type', correct: false},
+//     {text:'Device IRQ settings', correct: true},
+//     {text:'PCI bus speed', correct: true},
+//     {text:'Ethernet MAC address', correct: false},
+//     {text:'Device vendor identification', correct: true},
+//   ],
+//   richtig: [1,2,4]
+// },
+// {
+//   fid:120,
+//   ftyp:"multi",
+//   frage:['Given the following two symbolic links in a System V init configuration:',
+//   '/etc/rc1.d/K01apache2',
+//   '/etc/rc2.d/S02apache2',
+//  'When are the scripts executed that are referenced by these links? (Choose two.)'],
+//   antworten:[
+//     {text:'S02apache2 is run when runlevel 2 is entered.', correct: true},
+//     {text:'S02apache2 is run when runlevel 2 is left.', correct: false},
+//     {text:'K01apache2 is never run because K indicates a deactivated service.', correct: false},
+//     {text:'Both S02apache2 and K01apache2 are run during a system shutdown.', correct: false},
+//     {text:'K01apache2 is run when runlevel 1 is entered.', correct: true},
+//   ],
+//   richtig: [0,4],
+//     // 'Explanation: correct answer: AE',
+//     // 'Entering a runlevel, first all Kxx... scripts will be called with first parameter "stop" to stop the service.'
+//     // 'Then all Sxx... script will be called with first parameter "start" to start the service',
+
+//     // 'etc/rc1.d/K01apache2',
+//     //   'entering runlevel 1 : will execute script with parameter "stop" to stop service ',
+//     // '/etc/rc2.d/S02apache2',
+//     //   'entering runlevel 2 : will execute script with parameter "start" to start service',
+// }
+// ]
+// this.Scquestions =
+// [
+// {
+//   fid:1,
+//   ftyp:"single",
+//   frage:['Which type of file system is created by mkfs when it is executed with the block device name only and without any additional parameters?'],
+//   antworten:[
+//     {text:'XFS', correct: false},
+//     {text:'VFAT', correct: false},
+//     {text:'ext2', correct: true},
+//     {text:'ext3', correct: false},
+//     {text:'ext4', correct: false},
+//   ],
+//   richtig: [2]
+// },
+// {
+//   fid:2,
+//   ftyp:"single",
+//   frage:['Which umask value ensures that new directories can be read, written and listed by their owning user, read and listed by their owning group and are not accessible at all for everyone else?'],
+//   antworten:[
+//     {text:'0750', correct: false},
+//     {text:'0027', correct: true},
+//     {text:'0036', correct: false},
+//     {text:'7640', correct: false},
+//     {text:'0029', correct: false},
+//   ],
+//   richtig: [1]
+// },
+// {
+//   fid:3,
+//   ftyp:"single",
+//   frage:['Which of the following commands changes the number of days before the ext3 filesystem on /dev/sda1',
+//   'has to run through a full filesystem check while booting?'],
+//   antworten:[
+//     {text:'tune2fs -d 200 /dev/sda1', correct: true},
+//     {text:'tune2fs -i 200 /dev/sda1', correct: false},
+//     {text:'tune2fs -c 200 /dev/sda1', correct: false},
+//     {text:'tune2fs -n 200 /dev/sda1', correct: false},
+//     {text:'tune2fs --days 200 /dev/sda1', correct: false},
+//   ],
+//   richtig: [0]
+// },
+// {
+//   fid:4,
+//   ftyp:"single",
+//   frage:['Which is the default percentage of reserved space for the root user on new ext4 filesystems?'],
+//   antworten:[
+//     {text:'10%', correct: false},
+//     {text:'3%', correct: false},
+//     {text:'15%', correct: false},
+//     {text:'0%', correct: false},
+//     {text:'5%', correct: true},
+//   ],
+//   richtig: [4]
+// },
+// {
+//   fid:5,
+//   ftyp:"single",
+//   frage:['Which of the following is true when a file system, which is neither listed in /etc/fstab nor known to system, is mounted manually?'],
+//   antworten:[
+//     {text:'systemd ignores any manual mounts which are not done using the systemctl mount command', correct: false},
+//     {text:'The command systemctl mountsync can be used to create a mount unit based on the existing mount', correct: false},
+//     {text:'systemd automatically generates a mount unit and monitors the mount point without changing it', correct: true},
+//     {text:'Unless a systemd mount unit is created, systemd unmounts the file system after a short period of time', correct: false},
+//     {text:'systemctl unmount must be used to remove the mount because system opens a file descriptor on the mount point', correct: false},
+//   ],
+//   richtig: [2]
+// },
+// {
+//   fid:7,
+//   ftyp:"single",
+//   frage:['What does the command mount --bind do?'],
+//   antworten:[
+//     {text:'It makes the contents of one directory available in another directory', correct: true},
+//     {text:'It mounts all available filesystems to the current directory', correct: false},
+//     {text:'It mounts all user mountable filesystems to the user’s home directory', correct: false},
+//     {text:'It mounts all file systems listed in /etc/fstab which have the option userbindset', correct: false},
+//     {text:'It permanently mounts a regular file to a directory', correct: false},
+//   ],
+//   richtig: [0]
+// },
+// {
+//   fid:8,
+//   ftyp:"single",
+//   frage:['Consider the following output from the command ls -i:',
+//   '525385 a.txt',
+//   'How would a new file named c.txt be created with the same inode number as a.txt (Inode 525385)?'],
+//   antworten:[
+//     {text:'ln -h a.txt c.txt', correct: false},
+//     {text:'ln c.txt a.txt', correct: false},
+//     {text:'ln a.txt c.txt', correct: true},
+//     {text:'ln -f c.txt a.txt', correct: false},
+//     {text:'ln -i 525385 c.txt', correct: false},
+//   ],
+//   richtig: [2]
+// },
+// {
+//   fid:12,
+//   ftyp:"single",
+//   frage:['Which chown command changes the ownership to dave and the group to staff on a file named data.txt?'],
+//   antworten:[
+//     {text:'chown dave/staff data.txt', correct: false},
+//     {text:'chown -u dave -g staff data.txt', correct: false},
+//     {text:'chown --user dave --group staff data.txt', correct: false},
+//     {text:'chown dave+staff data.txt', correct: false},
+//     {text:'chown dave:staff data.txt', correct: true},
+//   ],
+//   richtig: [4]
+// },
+// {
+//   fid:13,
+//   ftyp:"single",
+//   frage:['When considering the use of hard links, what are valid reasons not to use hard links?'],
+//   antworten:[
+//     {text:'Hard links are not available on all Linux systems because traditional filesystems, such as ext4, do not support them', correct: false},
+//     {text:'Each hard link has individual ownership, permissions and ACLs which can lead to unintended disclosure of file content', correct: false},
+//     {text:'Hard links are specific to one filesystem and cannot point to files on another filesystem', correct: true},
+//     {text:'If users other than root should be able to create hard links, suln has to be installed and configured', correct: false},
+//     {text:'When a hard linked file is changed, a copy of the file is created and consumes additional space', correct: false},
+//   ],
+//   richtig: [2]
+// },
+// {
+//   fid:14,
+//   ftyp:"single",
+//   frage:['In compliance with the FHS, in which of the directories are man pages found?'],
+//   antworten:[
+//     {text:'/opt/man/', correct: false},
+//     {text:'/usr/doc/', correct: false},
+//     {text:'/usr/share/man/', correct: false},
+//     {text:'/var/pkg/man', correct: false},
+//     {text:'/var/man/', correct: false},
+//   ],
+//   richtig: [2]
+// },
+// {
+//   fid:16,
+//   ftyp:"single",
+//   frage:['What is the process ID number of the init process on a System V init based system?'],
+//   antworten:[
+//     {text:'-1', correct: false},
+//     {text:'0', correct: false},
+//     {text:'1', correct: true},
+//     {text:'It is different with each reboot', correct: false},
+//     {text:'It is set to the current run level', correct: false},
+//   ],
+//   richtig: [2]
+// },
+// {
+//   fid:17,
+//   ftyp:"single",
+//   frage:['Which daemon handles power management events on a Linux system?'],
+//   antworten:[
+//     {text:'acpid', correct: true},
+//     {text:'batteryd', correct: false},
+//     {text:'pwrmgntd', correct: false},
+//     {text:'psd', correct: false},
+//     {text:'inetd', correct: false},
+//   ],
+//   richtig: [0]
+// },
+// {
+//   fid:20,
+//   ftyp:"single",
+//   frage:['A faulty kernel module is causing issues with a network interface card.',
+//   'Which of the following actions ensures that this module is not loaded automatically when the system boots?'],
+//   antworten:[
+//     {text:'Using lsmod --remove --autocleanwithout specifying the name of a specific module', correct: false},
+//     {text:'Using modinfo -kfollowed by the name of the offending module', correct: false},
+//     {text:'Using modprobe -rfollowed by the name of the offending module', correct: false},
+//     {text:'Adding a blacklist line including the name of the offending module to the file /etc/modprobe.d/blacklist.conf', correct: true},
+//     {text:'Deleting the kernel module’s directory from the file system and recompiling the kernel, including its modules', correct: false},
+//   ],
+//   richtig: [4]
+// },
+// {
+//   fid:22,
+//   ftyp:"single",
+//   frage:['What is the first program the Linux kernel starts at boot time when using System V init?'],
+//   antworten:[
+//     {text:'/lib/init.so', correct: false},
+//     {text:'/proc/sys/kernel/init', correct: false},
+//     {text:'/etc/rc.d/rcinit', correct: false},
+//     {text:'/sbin/init', correct: false},
+//     {text:'/boot/init', correct: false},
+//   ],
+//   richtig: [3]
+// },
+// {
+//   fid:23,
+//   ftyp:"single",
+//   frage:['A Debian package creates several files during its installation.',
+//   'Which of the following commands searches for packages owning the file /etc/debian_version?'],
+//   antworten:[
+//     {text:'apt-get search /etc/debian_version', correct: false},
+//     {text:'apt -r /etc/debian_version', correct: false},
+//     {text:'find /etc/debian_version -dpkg', correct: false},
+//     {text:'dpkg -S  /etc/debian_version', correct: true},
+//     {text:'apt-file /etc/debian_version', correct: false},
+//   ],
+//   richtig: [3]
+// },
+// {
+//   fid:24,
+//   ftyp:"single",
+//   frage:['What is contained on the EFI System Partition?'],
+//   antworten:[
+//     {text:'The Linux root file system', correct: false},
+//     {text:'The first stage boot loader', correct: true},
+//     {text:'The default swap space file', correct: false},
+//     {text:'The Linux default shell binaries', correct: false},
+//     {text:'The user home directories', correct: false},
+//   ],
+//   richtig: [2]
+// },
+// {
+//   fid:27,
+//   ftyp:"single",
+//   frage:['Which of the following commands installs all packages with a name ending with the string foo?'],
+//   antworten:[
+//     {text:'zypper get "*foo"', correct: false},
+//     {text:'zypper update "foo?"', correct: false},
+//     {text:'zypper force "foo*"', correct: false},
+//     {text:'zypper install "*foo"', correct: true},
+//     {text:'zypper add ".*foo"', correct: false},
+//   ],
+//   richtig: [3]
+// },
+// {
+//   fid:29,
+//   ftyp:"single",
+//   frage:['Which of the following commands installs GRUB 2 into the master boot record on the third hard disk?'],
+//   antworten:[
+//     {text:'grub2 install /dev/sdc', correct: false},
+//     {text:'grub-mkrescue /dev/sdc', correct: false},
+//     {text:'grub-mbrinstall /dev/sdc', correct: false},
+//     {text:'grub-setup /dev/sdc', correct: false},
+//     {text:'grub-install /dev/sdc', correct: true},
+//   ],
+//   richtig: [4]
+// },
+// {
+//   fid:30,
+//   ftyp:"single",
+//   frage:['Which of the following partition types is used for Linux swap spaces when partitioning hard disk drives?'],
+//   antworten:[
+//     {text:'7', correct: false},
+//     {text:'82', correct: true},
+//     {text:'83', correct: false},
+//     {text:'8e', correct: false},
+//     {text:'fd', correct: false},
+//   ],
+//   richtig: [1]
+// },
+// {
+//   fid:32,
+//   ftyp:"single",
+//   frage:['Which of the following apt-get subcommands installs the newest versions of all currently installed packages?'],
+//   antworten:[
+//     {text:'auto-update', correct: false},
+//     {text:'dist-upgrade', correct: true},
+//     {text:'full-upgrade', correct: false},
+//     {text:'install', correct: false},
+//     {text:'update', correct: false},
+//   ],
+//   richtig: [1]
+// },
+// {
+//   fid:33,
+//   ftyp:"single",
+//   frage:['Which command uninstalls a package but keeps its configuration files in case the package is re-installed?'],
+//   antworten:[
+//     {text:'dpkg -s pkgname', correct: false},
+//     {text:'dpkg -L pkgname', correct: false},
+//     {text:'dpkg -P pkgname', correct: false},
+//     {text:'dpkg -v pkgname', correct: false},
+//     {text:'dpkg -r pkgname', correct: true},
+//   ],
+//   richtig: [4]
+// },
+// {
+//   fid:34,
+//   ftyp:"single",
+//   frage:['Which of the following commands lists the dependencies of the RPM package file foo.rpm?'],
+//   antworten:[
+//     {text:'rpm -qpR foo.rpm', correct: true},
+//     {text:'rpm -dep foo', correct: false},
+//     {text:'rpm -ld foo.rpm', correct: false},
+//     {text:'rpm -R foo.rpm', correct: false},
+//     {text:'rpm -pD foo', correct: false},
+//   ],
+//   richtig: [0]
+// },
+// {
+//   fid:35,
+//   ftyp:"single",
+//   frage:['What is the maximum niceness value that a regular user can assign to a process with the nice command when executing a new process?'],
+//   antworten:[
+//     {text:'9', correct: false},
+//     {text:'15', correct: false},
+//     {text:'19', correct: true},
+//     {text:'49', correct: false},
+//     {text:'99', correct: false},
+//   ],
+//   richtig: [2]
+// },
+// {
+//   fid:38,
+//   ftyp:"single",
+//   frage:['Which of the following vi commands deletes two lines, the current and the following line?'],
+//   antworten:[
+//     {text:'d2', correct: false},
+//     {text:'2d', correct: false},
+//     {text:'2dd', correct: false},
+//     {text:'dd2', correct: false},
+//     {text:'de12', correct: false},
+//   ],
+//   richtig: [2]
+// },
+// {
+//   fid:39,
+//   ftyp:"single",
+//   frage:['The command dbmaint & was used to run dbmaint in the background.',
+//   'However, dbmaint is terminated after logging out of the system.',
+//   'Which alternative dbmaint invocation lets dbmaint continue to run, even when the user, running the program, logs out?'],
+//   antworten:[
+//     {text:'job -b dmaint', correct: false},
+//     {text:'dbmaint &>/dev/pts/null', correct: false},
+//     {text:'nohup dbmaint &', correct: false},
+//     {text:'bg dbmaint', correct: false},
+//     {text:'wait dbmaint', correct: false},
+//   ],
+//   richtig: [2]
+// },
+// {
+//   fid:38,
+//   ftyp:"single",
+//   frage:['Immediately after deleting 3 lines of text in vi and moving the cursor to a different line, which single character command will insert the deleted content below the current line?'],
+//   antworten:[
+//     {text:'i (lowercase)', correct: false},
+//     {text:'p (lowercase)', correct: true},
+//     {text:'P (uppercase)', correct: false},
+//     {text:'U (uppercase)', correct: false},
+//     {text:'u (lowercase)', correct: false},
+//   ],
+//   richtig: [1]
+// },
+// // {
+// //   fid:43,
+// //   ftyp:"single",
+// //   frage:['Which of the following commands changes all CR-LF line breaks in the text file userlist.txt to Linux standard LF line breaks and stores the result in newlist.txt?'],
+// //   antworten:[
+// //     {text:'tr -d '\r' < userlist.txt > newlist.txt', correct: true},
+// //     {text:'tr -c '\n\r' '' <newlist.txt> userlist.txt', correct: false},
+// //     {text:'tr '\r\n' '' <userlist.txt> newlist.txt', correct: false},
+// //     {text:'tr '\r' '\n' userlist.txt newlist.txt', correct: false},
+// //     {text:'tr -s '/^M/^J/' userlist.txt newlist.txt', correct: false},
+// //   ],
+// //   richtig: [0]
+// // },
+// {
+//   fid:44,
+//   ftyp:"single",
+//   frage:['Given the following input stream:',
+//   'txt1.txt',
+//   'atxt.txt',
+//   'txtB.txt',
+//  'Which of the following regular expressions turns this input stream into the following output stream?',
+//   'txt1.bak.txt',
+//   'atxt.bak.txt',
+//   'txtB.bak.txt'],
+//   antworten:[
+//     {text:'s/^.txt/.bak/', correct: false},
+//     {text:'s/txt/bak.txt/', correct: false},
+//     {text:'s/txt$/bak.txt/', correct: true},
+//     {text:'s/^txt$/.bak^/', correct: false},
+//     {text:'s/[.txt]/.bak$1/', correct: false},
+//   ],
+//   richtig: [2]
+// },
+// {
+//   fid:45,
+//   ftyp:"single",
+//   frage:['Which command must be entered before exiting vi to save the current file as filea.txt?'],
+//   antworten:[
+//     {text:'%s filea.txt', correct: false},
+//     {text:'%w filea.txt', correct: false},
+//     {text:':save filea.txt', correct: false},
+//     {text:':w filea.txt', correct: true},
+//     {text:':s filea.txt', correct: false},
+//   ],
+//   richtig: [3]
+// },
+// {
+//   fid:46,
+//   ftyp:"single",
+//   frage:['Which of the following signals is sent to a process when the key combination Ctrl+C is pressed on the keyboard?'],
+//   antworten:[
+//     {text:'SIGTERM', correct: false},
+//     {text:'SIGCONT', correct: false},
+//     {text:'SIGSTOP', correct: false},
+//     {text:'SIGKILL', correct: false},
+//     {text:'SIGINT', correct: true},
+//   ],
+//   richtig: [4]
+// },
+// {
+//   fid:47,
+//   ftyp:"single",
+//   frage:['Which of the following commands displays the output of the foo command on the screen and also writes it to a file called /tmp/foodata?'],
+//   antworten:[
+//     {text:'foo | less /tmp/foodata', correct: false},
+//     {text:'foo | cp /tmp/foodata', correct: false},
+//     {text:'foo > /tmp/foodata', correct: false},
+//     {text:'foo | tee /tmp/foodata', correct: true},
+//     {text:'foo > stdout >> /tmp/foodata', correct: false},
+//   ],
+//   richtig: [3]
+// },
+// // {
+// //   fid:48,
+// //   ftyp:"single",
+// //   frage:['What output will be displayed when the user fred executes the following command?',
+// //   'echo `fred $USER`]',
+// //   antworten:[
+// //     {text:'fred fred', correct: false},
+// //     {text:'fred /home/fred/', correct: false},
+// //     {text:''fred $USER’', correct: false},
+// //     {text:'fred $USER', correct: false},
+// //     {text:''fred fred’', correct: false},
+// //   ],
+// //   richtig: [3]
+// // },
+// {
+//   fid:49,
+//   ftyp:"single",
+//   frage:['Which of the following commands displays the path to the executable file that would be executed when the command foo is invoked?'],
+//   antworten:[
+//     {text:'lsattr foo', correct: false},
+//     {text:'apropos foo', correct: false},
+//     {text:'locate foo', correct: false},
+//     {text:'whatis foo', correct: false},
+//     {text:'which foo', correct: true},
+//   ],
+//   richtig: [4]
+// },
+// {
+//   fid:50,
+//   ftyp:"single",
+//   frage:['When redirecting the output of find to the xargs command, what option to find is useful if the filenames contain spaces?'],
+//   antworten:[
+//     {text:'-rep-space', correct: false},
+//     {text:'-printnul', correct: false},
+//     {text:'-nospace', correct: false},
+//     {text:'-ignore-space', correct: false},
+//     {text:'-print0', correct: true},
+//   ],
+//   richtig: [4]
+// },
+// {
+//   fid:52,
+//   ftyp:"single",
+//   frage:['What is true regarding the command',
+//   'ls > files',
+// 'if files does not exist?'],
+//   antworten:[
+//     {text:'The output of ls is printed to the terminal', correct: false},
+//     {text:'files is created and contains the output of ls', correct: true},
+//     {text:'An error message is shown and ls is not executed', correct: false},
+//     {text:'The command files is executed and receives the output of ls', correct: false},
+//     {text:'Any output of ls is discarded', correct: false},
+//   ],
+//   richtig: [1]
+// },
+// {
+//   fid:53,
+//   ftyp:"single",
+//   frage:['Which of the following files, located in a user’s home directory, contains the Bash history?'],
+//   antworten:[
+//     {text:'.bashrc_history', correct: false},
+//     {text:'.bash_histfile', correct: false},
+//     {text:'.history', correct: false},
+//     {text:'.bash_history', correct: true},
+//     {text:'.history_bash', correct: false},
+//   ],
+//   richtig: [3]
+// },
+// {
+//   fid:55,
+//   ftyp:"single",
+//   frage:['Which of the following commands redirects the output of ls to standard error?'],
+//   antworten:[
+//     {text:'ls >-1', correct: false},
+//     {text:'ls <<ERR', correct: false},
+//     {text:'ls >&2', correct: true},
+//     {text:'ls >>2', correct: false},
+//     {text:'ls |error', correct: false},
+//   ],
+//   richtig: [2]
+// },
+// {
+//   fid:56,
+//   ftyp:"single",
+//   frage:['Which of the following commands displays the contents of a gzip compressed tar archive?'],
+//   antworten:[
+//     {text:'gzip archive.tgz | tar xvf', correct: false},
+//     {text:'tar -fzt archive.tgz', correct: false},
+//     {text:'gzip -d archive.tgz | tar tvf', correct: false},
+//     {text:'tar cf archive.tgz', correct: false},
+//     {text:'tar ztf archive.tgz', correct: true},
+//   ],
+//   richtig: [4]
+// },
+// {
+//   fid:57,
+//   ftyp:"single",
+//   frage:['Which of the following commands prints a list of usernames (first column) and their primary group',
+//   '(fourth column) from the /etc/passwd file?'],
+//   antworten:[
+//     {text:'fmt -f 1,4 /etc/passwd', correct: false},
+//     {text:'cut -d : -f 1,4 /etc/passwd', correct: true},
+//     {text:'sort -t : -k 1,4 /etc/passwd', correct: false},
+//     {text:'paste -f 1,4 /etc/passwd', correct: false},
+//     {text:'split -c 1,4 /etc/passwd', correct: false},
+//   ],
+//   richtig: [1]
+// },
+// {
+//   fid:58,
+//   ftyp:"single",
+//   frage:[''],
+//   antworten:[
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//   ],
+//   richtig: ['A']
+// },
+// {
+//   fid:38,
+//   ftyp:"single",
+//   frage:[''],
+//   antworten:[
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//   ],
+//   richtig: ['A']
+// },
+// {
+//   fid:38,
+//   ftyp:"single",
+//   frage:[''],
+//   antworten:[
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//   ],
+//   richtig: ['A']
+// },
+// {
+//   fid:38,
+//   ftyp:"single",
+//   frage:[''],
+//   antworten:[
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//   ],
+//   richtig: ['A']
+// },
+// {
+//   fid:38,
+//   ftyp:"single",
+//   frage:[''],
+//   antworten:[
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//   ],
+//   richtig: ['A']
+// },
+// {
+//   fid:38,
+//   ftyp:"single",
+//   frage:[''],
+//   antworten:[
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//   ],
+//   richtig: ['A']
+// },
+// {
+//   fid:38,
+//   ftyp:"single",
+//   frage:[''],
+//   antworten:[
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//     {text:'', correct: false},
+//   ],
+//   richtig: ['A']
+// }
+// ]
+// }
+// }

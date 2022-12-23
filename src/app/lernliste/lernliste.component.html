@@ -1,0 +1,62 @@
+<div style="max-width: 400px; max-height: 600px;">
+
+
+  <div class="lernlisteflow">
+
+    <div *ngFor="let liste of allefragenliste">
+      <h4>FragenNr: {{liste.fid}}</h4><br>
+      <div> {{liste.frage}} </div><br>
+
+      <div *ngFor="let ans of liste.antworten">
+        <div>{{ans.text}}</div>
+      </div>
+      <div>
+        <button (click)="ergebniss(liste.fid)">Ergebniss</button>
+        <div *ngIf="visible">
+          <div *ngIf="answerID == liste.fid" class="large text">
+            {{liste.richtig}}
+        </div>
+
+      </div>
+        <hr>
+      </div>
+      <!-- <ul class="heroes">
+    <li *ngFor="let zeile of frage.frage">
+      <a routerLink="/lerneinzeln/{{frage.fid}}">
+        <span class="badge">{{frage.fid}}</span> {{frage.antworten}
+      </a>
+    </li>
+  </ul> -->
+
+  <!--     <mat-card class="card2">
+        <div>
+          <button class="ui animated button" routerLink="Auswertung">
+            <div class="visible content">Ende</div>
+            <div class="hidden content">
+              <i class="right arrow icon"></i>
+            </div>
+          </button>
+
+        </div>
+      </mat-card> -->
+    </div>
+</div>
+<div class="buttonfeld"></div>
+
+
+  <!-- <div>
+  <label>Antwort:
+    <input #heroName />
+  </label>
+   (click) passes input value to add() and then clears the input -->
+
+<!--
+  <ul class="fragen">
+    <li *ngFor="let liste of allefragenliste">
+      <a routerLink="../lerneinzeln/{{liste.fid}}">
+        <span class="badge">{{liste.fid}}</span>
+          <div *ngFor="let antwort of liste.antworten">{{antwort.text}}</div>
+      </a>
+    </li>
+  </ul>
+ -->

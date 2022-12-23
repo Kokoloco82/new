@@ -1,0 +1,299 @@
+<h4>LTPS Zertifizierungs - Simulator für Multiple- Single - Fillin Fragen</h4>
+
+<mat-card class="card" *ngIf="!unsichtbar">
+  <div class="Auswertung">
+     <P>Auswertung deiner Antworten</P><div> <br>
+    <div>
+      Anzahl Fragen            : {{kontrolle.fanzahl}} <br><br>
+      Anzahl Richtiger Fragen  : {{kontrolle.frichtig}} <br><br>
+      Anzahl Falscher Antworten: {{kontrolle.ffalsch}} <br><br>
+      Anzahl Nicht Beantwortet : {{kontrolle.fnichtbeantwortet}} <br><br>
+    </div>
+  </div>
+
+</div>
+</mat-card>
+<div class="ui form" *ngIf="unsichtbar">
+  <mat-card class="card">
+    <h2>FragenNr.: {{ frage.fid }}</h2>
+    <div *ngFor="let zeile of frage.frage">
+      <div style="white-space: pre-wrap; margin-bottom: 10px;" class="textfeldfrage">{{ zeile }}</div>
+    </div>
+    <div class="field">
+      <div>
+
+        <div *ngIf="frage.ftyp === 'multi'">
+          <!-- <h6> habe multi gefunden </h6> -->
+          <!-- // antorten sind selectierbar -->
+          <div *ngIf="!visible">
+            <div *ngFor="let antwort of frage.antworten">
+              <div *ngIf="!antwort.checked">
+                <div fxlayout="row">
+                  <input type="checkbox" (click)="antwort.checked = !antwort.checked">
+                  <label >{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                </div>
+              </div>
+              <div *ngIf="antwort.checked">
+                <div fxlayout="row">
+                  <input type="checkbox" (click)="antwort.checked = !antwort.checked" checked>
+                  <label >{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- // nur correcte antowrten anzeigen -->
+          <div *ngIf="visible">
+            <h3>Richtige Antworten sind:</h3>
+            <h5>Selktieren wird nicht gewertet!!!</h5>
+            <div *ngFor="let antwort of frage.antworten">
+              <div *ngIf="!antwort.correct">
+                <div fxlayout="row">
+                  <input type="checkbox">
+                  <label>{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                </div>
+              </div>
+              <div *ngIf="antwort.correct">
+                <div fxlayout="row">
+                  <input type="checkbox" checked>
+                  <label>{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div *ngIf="frage.ftyp === 'single'">
+          <!-- <h6>habe single gefunden</h6> -->
+          <!-- // antorten sind selectierbar -->
+          <div *ngIf="!visible">
+            <div *ngFor="let antwort of frage.antworten">
+              <div *ngIf="!antwort.checked">
+                <div fxlayout="row">
+                  <input type="radio" (click)="setSingleAnswer(frage,antwort)">
+                  <label style="white-space: pre-wrap;">{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                  </div>
+                </div>
+                <div *ngIf="antwort.checked">
+                  <div fxlayout="row">
+                    <input type="radio" (click)="setSingleAnswer(frage,antwort)" checked>
+                    <label>{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <!-- // nur correcte antowrten anzeigen -->
+          <div *ngIf="visible">
+            <h3>Richtige Antworten sind:</h3>
+            <h5>Selktieren wird nicht gewertet!!!</h5>
+            <div *ngFor="let antwort of frage.antworten">
+              <div *ngIf="!antwort.correct">
+                <div fxlayout="row">
+                  <input type="radio">
+                  <label>{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                </div>
+              </div>
+              <div *ngIf="antwort.correct">
+                <div fxlayout="row">
+                  <input type="radio" checked>
+                  <label>{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div *ngIf="frage.ftyp === 'fillin'">
+        <!-- <h6>habe single gefunden</h6> -->
+          <!-- // antorten sind selectierbar -->
+          <div *ngIf="!visible">
+            <div *ngFor="let antwort of frage.antworten">
+              <div *ngIf="!antwort.checked">
+                <div fxlayout="row">
+                  <!-- <input type="text" size="30" placeholder="Gib deine Antwort ein" #box (keyup)="getvalue(box.value)"> -->
+                  <input size="30" placeholder="Gib deine Antwort ein" [(ngModel)]="frage.fiantwort"><!-- {{frage.fiantwort}}-->
+                  <label style="white-space: pre-wrap;"><!--{{ antwort.text }} r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                  </div>
+                </div>
+                <div *ngIf="antwort.checked">
+                  <div fxlayout="row">
+                    <!-- <input type="text" size="30" placeholder="Gib deine Antwort ein" #box (keyup)="getvalue(box.value)" > -->
+                  <input  size="30" placeholder="Gib deine Antwort ein" [(ngModel)]="frage.fiantwort"><!-- {{frage.fiantwort}}-->
+                  <label>{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <!-- // nur correcte antowrten anzeigen -->
+          <div *ngIf="visible">
+            <h3>Richtige Antwort ist:</h3>
+            <div *ngFor="let antwort of frage.antworten">
+              <div *ngIf="!antwort.correct">
+                <div fxlayout="row">
+                  <!-- <input type="text" size="30" placeholder="Gib deine Antwort ein" #box (keyup)="getvalue(box.value)"> -->
+                  <input  size="30" placeholder="Gib deine Antwort ein" [(ngModel)]="frage.fiantwort"><!-- {{frage.fiantwort}}-->
+                  <label>{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                </div>
+              </div>
+              <div *ngIf="antwort.correct">
+                <div fxlayout="row">
+                  <label>{{ antwort.text }} <!-- r:{{antwort.correct}} s:{{antwort.checked}}--></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </mat-card>
+
+  <mat-card class="card2">
+    <button (click)="letztequestion()" class="ui animated fade button blue" >
+    <div class="visible content">letztefrage</div>
+    <div class="hidden content">back</div>
+  </button>
+
+  <button (click)="erstequestion()" class="ui animated fade button blue" >
+    <div class="visible content">ErsteFrage</div>
+    <div class="hidden content">back</div>
+  </button>
+
+  <button (click)="prev()" class="ui animated fade button blue" >
+    <div class="visible content">prev</div>
+    <div class="hidden content">"<"</div>
+  </button>
+
+  <button (click)="next()" class="ui animated fade button blue" >
+    <div class="visible content">next</div>
+    <div class="hidden content">">"</div>
+  </button>
+
+  <button (click)="skip()" class="ui animated fade button blue" >
+    <div class="visible content">skip</div>
+    <div class="hidden content">">"</div>
+  </button>
+
+  <button type="button" (click)="visible = !visible" class="ui animated fade button green" >
+    <div class="visible content">Lösung</div>
+    <div class="hidden content">back</div>
+  </button>
+</mat-card>
+</div>
+
+<div class="buttonfeld">
+<button (click)="mischeFragen()" class="ui animated fade button blue" >
+  <div class="visible content">Mischen</div>
+  <div class="hidden content">back</div>
+</button>
+
+<button (click)="fragenSortieren()" class="ui animated fade button blue" >
+  <div class="visible content">Sortieren</div>
+  <div class="hidden content">back</div>
+</button>
+
+<button (click)="end();unsichtbar=false" class="ui animated fade button red">
+  <div class="visible content">Ende</div>
+  <div class="hidden content">Sicher?</div>
+</button>
+
+<button (click)="neustart()" class="ui animated fade button green">
+  <div class="visible content">Neustart</div>
+  <div class="hidden content">Sicher?</div>
+</button>
+</div>
+
+
+<!-- <div *ngFor="let liste of allefragenliste">
+  <div>FragenNr:  {{liste.fid}}</div><br>
+  <div>{{liste.frage}} </div><br>
+
+  <div *ngFor="let ans of liste.antworten">
+    <input class="phibox" type="checkbox" (checked)="richtig(ans.text)">
+  <div>{{ans.text}}</div>
+</div>
+<div >
+  <button (click)="ergebniss(liste.fid)">Ergebniss</button>
+  <div *ngIf="visible">
+    <div *ngIf="answerID == liste.fid" class="large text">
+        {{liste.richtig}}
+      </div>
+
+    </div>
+    <hr>
+  </div> -->
+
+
+<!-- <button (click)="prev()">prev</button>
+  <button (click)="visible = !visible">lösen</button> -->
+  <!-- <button (click)="toogleVisible()">lösen</button> -->
+  <!-- <button (click)="next(frage.richtig, frage.antworten)">next</button> -->
+
+  <!-- <button (click)="toogleVisible()">lösen</button> -->
+  <!-- <button *ngIf="!first" (click)="erstequestion()" class="ui basic  mini black button">first</button>
+  <button *ngIf="first" (click)="erstequestion()" class="ui basic  mini black button" disabled>first</button>
+
+  <button *ngIf="last" (click)="letztequestion()" class="ui basic  mini black button" disabled>last</button>
+  <button *ngIf="!last" (click)="letztequestion()" class="ui basic  mini black button">last</button> -->
+
+  <!-- <button *ngIf="first" (click)="prev()" class="ui basic  mini blue button" disabled>prev</button>
+    <button *ngIf="!first" (click)="prev()" class="ui basic  mini blue button">prev</button>
+
+    <button *ngIf="!last" (click)="next()" class="ui basic  mini blue button">next</button>
+    <button *ngIf="last" (click)="next()" class="ui basic  mini blue button" disabled>next</button> -->
+
+
+
+<!-- <hr>
+
+
+
+  <button *ngIf="first" (click)="prevQuestion()" class="ui basic  mini blue button" disabled>prev</button>
+  <button *ngIf="!first" (click)="prevQuestion()" class="ui basic  mini blue button">prev</button>
+
+  <button (click)="learn(question.fid:)" class="ui  mini green button">learn</button>
+
+
+
+  Frage: {{ question.fid}} : <br>
+  {{ question.qtxt}}
+  <div *ngFor="let antwort of question.qantworts">
+    <div *ngIf="selectid == question.fid:">
+      <div *ngIf="learning">
+        <div class="ui checkbox" *ngIf="selectid == question.fid: && antwort.correct" class="mygreen">
+          <input type="checkbox" checked disabled class="mytest">
+          <label>
+            {{ antwort.txt }}
+          </label>
+        </div>
+        <div class="ui checkbox" *ngIf="selectid == question.fid: && !antwort.correct">
+          <input type="checkbox" disabled>
+          <label>
+            {{antwort.txt}}
+          </label>
+      </div>
+    </div>
+    <div *ngIf="!learning">
+      <div class="ui checkbox">
+        <input type="checkbox" disabled>
+        <label>
+          {{antwort.txt}}
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="selectid != question.fid:">
+    <div class="ui checkbox">
+      <input type="checkbox" disabled>
+      <label>
+        {{antwort.txt}}
+      </label>
+    </div>
+  </div>
+</div> -->

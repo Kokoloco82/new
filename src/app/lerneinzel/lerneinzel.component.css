@@ -1,0 +1,54 @@
+/* .green {
+  color: lightgreen
+}
+.orange {
+  color: orange
+}
+ */
+ .card {
+  padding: 20px;
+  margin-top: 5px;
+  margin-left: 50px;
+  text-align: left;
+  height: 450px;
+  width: 650px;
+}
+.card2 {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+  margin-left: 40px;
+  background-color: rgb(9, 10, 10);
+  text-align: center;
+}
+/* .example-section {
+  margin: 12px 0;
+}
+ */
+.textfeldfrage {
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+
+.field {
+  margin-top: 100vh;
+  margin-bottom: 10px;
+}
+
+.buttonfeld {
+  text-align: center;
+  margin: auto;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+h1,h2,h3,h4 {
+  margin-left: 10px;
+  text-align: center;
+}
+
+.Auswertung {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}

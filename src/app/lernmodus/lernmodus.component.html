@@ -1,0 +1,74 @@
+<h4>LPI Zertifizierungs - Simulator für Multiple- Single - Fillin Fragen</h4>
+
+<mat-card class="card3">
+  <p>Hier hast du die Möglichkeit den Wissen zu festigen</p>
+<br>
+
+  <p>Du hast eine Auswahl an verschiedenen Optionen</p>
+  <br>
+
+  <p>Lernmodus: mit Einzelfragen und einer Liste mit Antworten zum Lernen</p>
+  <br>
+
+  <p>Testmodus: wo du eine erste Simulation für eine Prüfung durchführen kannst, bei 7 falschen Antworten kommst du zurück in den Lernmodus</p>
+  <br>
+
+
+  <p>Prüfmodus: der die wirkliche Prüfung simulieren soll, aber auch der Prüfmodus wird dich bei 20% falscher Antworten zurück zum Lernmodus befördern.</p>
+  <br>
+</mat-card>
+
+
+
+
+<mat-card class="card2">
+  <button class="ui animated button blue" routerLink="../lernliste">
+    <div class="visible content">LernListe</div>
+    <div class="hidden content">
+      <i class="right arrow icon"></i>
+    </div>
+  </button>
+
+  <button class="ui animated button blue" routerLink="../lerneinzeln">
+    <div class="visible content">LernEinzeln</div>
+    <div class="hidden content">
+      <i class="right arrow icon"></i>
+    </div>
+  </button>
+  <button class="ui animated button blue" routerLink="../lernmulti/">
+    <div class="visible content">LernMulti</div>
+    <div class="hidden content">
+      <i class="right arrow icon"></i>
+    </div>
+  </button>
+  <button class="ui animated button blue" routerLink="../lernsingle/">
+    <div class="visible content">LernSingle</div>
+    <div class="hidden content">
+      <i class="right arrow icon"></i>
+    </div>
+  </button>
+  <button class="ui animated button blue" routerLink="../lernfillin">
+    <div class="visible content">LernFillin</div>
+    <div class="hidden content">
+      <i class="right arrow icon"></i>
+    </div>
+  </button>
+</mat-card>
+
+
+  <!-- <mat-list>
+    <h3 mat-subheader>Folders</h3>
+    <mat-list-item *ngFor="let folder of folders; last as last">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <h4 mat-line>{{folder.name}}</h4>
+      <p mat-line class="demo-2"> {{folder.updated}} </p>
+      <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <h3 mat-subheader>Notes</h3>
+    <mat-list-item *ngFor="let note of notes">
+      <mat-icon mat-list-icon>note</mat-icon>
+      <h4 mat-line>{{note.name}}</h4>
+      <p mat-line class="demo-2"> {{note.updated}} </p>
+    </mat-list-item>
+  </mat-list> -->
